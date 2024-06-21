@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form per report vendite</title>
+    <!--  collego file css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- collego font cabin nei suoi pesi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--     creato form per report vendite, con campi comprendenti etichette, input, e tasto submit -->
+
+    <h1>Invio Report Vendite</h1>
+    <!-- blocco la submit per calcolare il totale -->
+    <form onsubmit="event.preventDefault(); calcolaTotale();">
+        <div class="campo-form">
+            <label for="nomeDipendente">Nome dipendente*</label>
+            <input type="text" id="nomeDipendente" name="nomeDipendente" required autofocus>
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="prodottoVenduto">Prodotto venduto*</label>
+            <select id="prodottoVenduto" name="prodottoVenduto" required>
+                <option value="">Seleziona un prodotto</option>
+                <option value="Prodotto1">Prodotto 1</option>
+                <option value="Prodotto2">Prodotto 2</option>
+                <option value="Prodotto3">Prodotto 3</option>
+            </select>
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="quantitaVenduta">Quantità venduta*</label>
+            <!-- (inserire il campo Pz; Gr; Kg) -->
+            <input type="number" id="quantitaVenduta" name="quantitaVenduta" required>
+            <span class="error"></span>
+            <select id="unita" name="unita" required>
+                <option value="Pz">Pz</option>
+                <option value="Gr">Gr</option>
+                <option value="Kg">Kg</option>
+            </select>
+        </div>
+        <div class="campo-form">
+            <label for="totale">Totale</label>
+            <!-- (In base al prodotto dovrà fare il calcolo per sapere il totale) -->
+            <input type="text" id="totale" name="totale" readonly>
+            <span class="error"></span>
+        </div>
+        
+        <div>
+            <button id="btn" type="submit">Invia report</button>
+        </div>
+    </form>
+    <p id="messaggio" class="success"></p>
+    <script src="function-7.js"></script>
+</body>
+</html>

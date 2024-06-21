@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di Uscita Dipendente</title>
+    <!--  collego file css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- collego font cabin nei suoi pesi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--     creato form per la registrazione di uscita dipendente, con campi comprendenti etichette, input, e tasto submit -->
+
+    <h1>Registrazione Uscita Dipendente</h1>
+<!--     in action mettere la mail del datore del lavoro, per far arrivare i dati compilati nel form, cliccando su submit. Esempio: <form action="mailto:abc@gmail.com" method="post"> -->
+    <form action="#" method="post">
+        <div class="campo-form">
+            <label for="nome">Nome*</label>
+            <input type="text" id="nome" name="nome" required autofocus>
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="cognome">Cognome*</label>
+            <input type="text" id="cognome" name="cognome" required>
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="matricola">Numero Matricola</label>
+            <input type="text" id="matricola" name="matricola">
+            <span class="error"></span>
+        </div>
+        <label for="oraUscita">Ora uscita:</label><br>
+        <input type="text" id="oraUscita" name="oraUscita" readonly>
+        <span class="error"></span><br><br>
+
+        <label for="note">Note per eventuali motivi <br> di uscita anticipata, di straordinario <br>o di normale uscita:</label><br>
+        <textarea id="note" name="note" rows="4" cols="50"></textarea><br><br>
+
+        <div>
+            <button id="btn" type="submit">Invia</button>
+        </div>
+    </form>
+    <p id="messaggio" class="success"></p>
+    <script src="function-3.js"></script>
+</body>
+</html>

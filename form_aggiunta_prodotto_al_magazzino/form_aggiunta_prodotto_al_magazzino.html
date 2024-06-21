@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form per Aggiunta Prodotto al Magazzino</title>
+    <!--  collego file css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- collego font cabin nei suoi pesi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--     creato form per l'aggiunta Prodotto al Magazzino, con campi comprendenti etichette, input, e tasto submit -->
+
+    <h1>Aggiunta Prodotto al Magazzino</h1>
+    <form action="#" method="post">
+        <div class="campo-form">
+            <label for="nomeProdotto">Nome prodotto*</label>
+            <input type="text" id="nomeProdotto" name="nomeProdotto" required autofocus>
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="descrizione">Descrizione</label>
+            <textarea id="descrizione" name="descrizione" rows="4" cols="50"></textarea>
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="quantitaIniziale">Quantità iniziale*</label>
+            <input type="number" id="quantitaIniziale" name="quantitaIniziale">
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="categoria">Categoria*</label>
+            <input type="text" id="categoria" name="categoria">
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="fornitore">Fornitore*</label>
+            <input type="text" id="fornitore" name="fornitore">
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="prezzoDiAcquisto">Prezzo di acquisto*</label>
+            <input type="number" placeholder="€ Importo" id="prezzoDiAcquisto" name="prezzoDiAcquisto" required>
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="prezzoDiVendita">Prezzo di vendita*</label>
+            <input type="number" placeholder="€ Importo" id="prezzoDiVendita" name="prezzoDiVendita" required>
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="dataDiRegistrazioneProdotto">Data di registrazione prodotto</label>
+            <input type="date" id="dataDiRegistrazioneProdotto" name="dataDiRegistrazioneProdotto">
+            <span class="error"></span>
+        </div>
+        <div class="campo-form">
+            <label for="dataScadenzaProdotto">Data scadenza prodotto</label>
+            <input type="date" id="dataScadenzaProdotto" name="dataScadenzaProdotto">
+            <span class="error"></span>
+        </div>
+  
+        <div>
+            <button id="btn" type="submit">Aggiungi prodotto</button>
+        </div>
+    </form>
+    <p id="messaggio" class="success"></p>
+    <script src="function-4.js"></script>
+</body>
+</html>

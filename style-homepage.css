@@ -1,0 +1,214 @@
+/* Reset */
+/* Resetto le impostazioni di margine e padding a 0, con border box. Dò un colore di background */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#ccbeef;
+}
+
+
+/* MENU-PRIMARY */ 
+
+/* Dò alla navbar un orientamento orizzontale e un distanziamento uniforme a destra e sinistra. Centro in verticale e dò dello spazio in alto. */
+nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3%;
+    /* margin-top: 50px; */
+}
+
+/* Dò al logo uno spazio a sinistra e una larghezza */
+nav .logo img {
+/*     margin-left: 150px; */
+    margin-left: 172%;
+    width: 90px;
+}
+
+/* Dò al menu un orientamento orizzontale, elimino il list style e dò uno spazio a destra */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /* margin-right: 100px; */
+    margin-right: 6.5%;
+}
+
+/* Dò al menu delle larghezze uguali e un distanziamento */
+nav ul li {
+    flex: 1; 
+    margin-right: 20px;
+}
+
+/* Dò ai tag <a> della navbar una centratura, uno spazio interno, lo stampatello, un colore al testo e al bordo, un colore di sfondo, una larghezza minima e un'animazione che faccia scalare i pulsanti all'hover */
+nav ul li a {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-decoration: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: #191970;
+    border: 1px solid #191970;
+    background-color: #ffffff;
+    margin-right: 15px; 
+    border-radius: 3px;
+    width: 100%; 
+    box-sizing: border-box; 
+    min-width: 150px; 
+    transform: scale(1); /* Imposto la scala iniziale */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Definisco la transizione */
+}
+
+/* Personalizzo l'hover sul tag <a> della navbar */
+nav ul li a:hover {
+ background-color: #DA9DC0;
+ color: #ffffff;
+ border: 1px solid #ffffff;
+ transform: scale(1.05); 
+ cursor: grab;
+}
+
+
+
+/* CONTENT (ASIDE + SEZ ATTIVITA) */
+
+/* Dò un orientamento orizzontale alle sezioni, per affiancarle */ 
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* MENU-ASIDE */ 
+
+/* Dò un orientamento in colonna all'aside e dò del margine al top */ 
+aside {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin-top: 20px; */
+    margin-top: 2%;
+}
+
+/* Dò un orientamento in colonna e dò uno spazio a sinistra e in alto */ 
+aside ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    /* margin-left: 100px; */
+    /* margin-top: 100px; */
+    margin-left: 50%;
+    margin-top: 40%;
+}
+
+/* Dò all'aside delle larghezze uguali */
+aside ul li {
+    flex: 1; 
+}
+
+/* Dò ai tag <a> dell'aside una centratura, uno spazio interno, lo stampatello, un colore al testo e al bordo, un colore di sfondo, una larghezza minima e un'animazione che faccia scalare i pulsanti all'hover */
+aside ul li a {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-decoration: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: #191970;
+    border: 1px solid #191970;
+    background-color: #ffffff;
+    margin-bottom: 15px; 
+    border-radius: 3px;
+    width: 100%; 
+    box-sizing: border-box; 
+    min-width: 200px; 
+    transform: scale(1); /* Imposto la scala iniziale */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Definisco la transizione */
+}
+
+/* Personalizzo l'hover sul tag <a> dell'aside' */
+aside ul li a:hover {
+    background-color: #DA9DC0;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    transform: scale(1.05); 
+    cursor: grab;
+}
+
+
+
+/* SEZIONE ATTIVITA' DEL LAVORATORE */ 
+
+/* Dò un orientamento in colonna alla sezione, centro e dò del margine a destra e al top */ 
+.attivita_lavoratore {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/*     margin-right: 500px;
+    margin-top: 80px;   */
+    margin-right: 7.5%;
+    margin-top: 4%;
+}
+
+/* Elimino al tag <a> la sottolineatura e dò al testo uno stampatello */ 
+.attivita_lavoratore a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Stilizzo i box: orientamento in colonna, spazio a sinistra e in alto, grandezza uniforme, colore di testo, spazio interno e stile di bordo */
+.attivita_lavoratore .box {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-left: 220px;
+    margin-top: 100px;
+    flex: 1; 
+    color: #ffffff;
+    padding: 20px 15px;
+    width: 900px;
+    border: 2px solid #ffffff;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Assegno un colore alla classe box-1 */
+.attivita_lavoratore .box-1 {
+    background-color:#191970;
+}
+
+/* Assegno un colore alla classe box-2 */
+.attivita_lavoratore .box-2 {
+    background-color:#2525A7;
+}
+
+/* Assegno un colore alla classe box-3 */
+.attivita_lavoratore .box-3 {
+    background-color:#3636D3;
+}
+
+/* Assegno un colore alla classe box-4 */
+.attivita_lavoratore .box-4 {
+    background-color:#6868DE;
+}
+
+/* Stilizzo l'hover su box-1, box-2, box-3 e box-4 */
+.attivita_lavoratore .box-1:hover, .attivita_lavoratore .box-2:hover, .attivita_lavoratore .box-3:hover, .attivita_lavoratore .box-4:hover {
+    background-color:#D1345B;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+
