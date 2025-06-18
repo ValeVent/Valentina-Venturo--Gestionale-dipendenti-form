@@ -1,4 +1,5 @@
-// CACHE DEL DOM
+//CACHE DEL DOM
+
 const nomeInput = document.querySelector("#nome");
 const cognomeInput = document.querySelector("#cognome");
 const annoInput = document.querySelector("#anno_nascita");
@@ -14,7 +15,7 @@ const submitBtn = document.querySelector("#btn");
 const errorSpans = document.querySelectorAll("span.error");
 const messagePar = document.querySelector("#messaggio");
 
-// FUNZIONI DI VALIDAZIONE
+/* funzioni per la validazione dei campi */
 
 function isNomeCognomeValid(valore) {
   let pattern = /^[A-Za-z\s-,]+$/;
@@ -32,121 +33,134 @@ function isTelOrCelFilled() {
 
 function isNumValid(valore) {
   let numbers = /^[0-9]+$/;
-  return numbers.test(valore.trim());
+  return numbers.test(valoreInput.trim());
 }
 
 function isCampoValorizzato(campo) {
-  return campo.value.trim().length !== 0;
+  return nomeInput.value.trim().length != 0;
 }
 
 function isLuogoNascitaValid(valore) {
-  let pattern = /^[A-Za-z\s-,]+$/;
-  return pattern.test(valore);
+    let pattern = /^[A-Za-z\s-,]+$/;
+    return pattern.test(valore);
 }
 
 function isViaValid(valore) {
-  let pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/;
-  return pattern.test(valore);
+    let pattern = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,10}$/;
+    return pattern.test(valore);
 }
+
 
 function isMatricolaValid(valore) {
-  let pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/;
-  return pattern.test(valore);
+    let pattern = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,10}$/;
+    return pattern.test(valore);
 }
 
-// GESTIONE EVENTO SUBMIT
-submitBtn.addEventListener("click", function (e) {
-  e.preventDefault();
+//GESTIONE EVENTI
 
-  // Reset messaggi di errore
-  for (let error of errorSpans) {
+submitBtn.addEventListener("click", function (e) {
+e.preventDefault(); //blocco della submit
+
+//criteri di validazione:
+//Nome e cognome (solo alfabetici con spazi e virgola e trattino)
+//numero di telefono solo numerico (quando è valorizzato)
+//anno di nascita (obbligatorio)
+//luogo di nascita (obbligatorio e alfabetico)
+//via (obbligatoria e alfanumerica)
+//città (obbligatoria e alfabetica)
+//provincia (obbligatoria e alfabetica)
+//matricola (non obbligatoria, ma controllo alfanumerico)  
+
+//reset errors
+for (let error of errorSpans) {
     error.innerHTML = "";
   }
-
   let valid = true;
-
-  // Nome e Cognome
+//validazione campi
+//Nome e cognome (solo alfabetici con spazi e virgola e trattino)
   if (!isCampoValorizzato(nomeInput) || !isNomeCognomeValid(nomeInput.value)) {
     nomeInput.nextElementSibling.innerHTML = "campo non valido";
     valid = false;
   }
-
-  if (!isCampoValorizzato(cognomeInput) || !isNomeCognomeValid(cognomeInput.value)) {
+  if (
+    !isCampoValorizzato(cognomeInput) ||
+    !isNomeCognomeValid(cognomeInput.value)
+  ) {
     cognomeInput.nextElementSibling.innerHTML = "campo non valido";
     valid = false;
   }
-
-  // Telefono o Cellulare (almeno uno obbligatorio)
-  const telefonoMsg = document.querySelector("#error-message");
+  
+//validazione tel e cell e verifica che almeno uno dei due campi sia compilato 
   if (!isTelOrCelFilled()) {
-    telefonoMsg.style.display = "block";
+    document.querySelector("#error-message").style.display = "block";
     valid = false;
-  } else {
-    telefonoMsg.style.display = "none";
+} else {
+    document.querySelector("#error-message").style.display = "none";
     if (telInput.value.trim().length > 0 && !isTelValid(telInput.value)) {
-      telInput.nextElementSibling.innerHTML = "campo non valido";
-      valid = false;
+        telInput.nextElementSibling.innerHTML = "campo non valido";
+        valid = false;
     }
     if (celInput.value.trim().length > 0 && !isTelValid(celInput.value)) {
-      celInput.nextElementSibling.innerHTML = "campo non valido";
-      valid = false;
+        celInput.nextElementSibling.innerHTML = "campo non valido";
+        valid = false;
     }
-  }
+}
 
-  // Anno di nascita
-  if (annoInput.value.trim().length === 0) {
+  //anno di nascita (obbligatorio)
+  if (annoInput.value.trim().length == 0) {
     annoInput.nextElementSibling.innerHTML = "campo non valido";
     valid = false;
   }
 
-  // Luogo di nascita
-  if (!isCampoValorizzato(luogoInput) || !isLuogoNascitaValid(luogoInput.value)) {
+  //luogo nascita (obbligatorio e alfabetico)
+  if (luogoInput.value.trim().length == 0 || !isLuogoNascitaValid(luogoInput.value)) {
     luogoInput.nextElementSibling.innerHTML = "campo non valido";
     valid = false;
   }
 
-  // Via
-  if (!isCampoValorizzato(viaInput) || !isViaValid(viaInput.value)) {
+  //via (obbligatorio e alfanumerico)
+  if (viaInput.value.trim().length == 0 && !isViaValid(viaInput.value)) {
     viaInput.nextElementSibling.innerHTML = "campo non valido";
     valid = false;
   }
-
-  // Città
-  if (!isCampoValorizzato(cittaInput) || !isLuogoNascitaValid(cittaInput.value)) {
+  
+//città (obbligatoria e alfabetico)
+if (cittaInput.value.trim().length == 0 || !isLuogoNascitaValid(cittaInput.value)) {
     cittaInput.nextElementSibling.innerHTML = "campo non valido";
     valid = false;
   }
 
-  // Provincia
-  if (!isCampoValorizzato(provInput) || !isLuogoNascitaValid(provInput.value)) {
+//provincia (obbligatoria e alfabetico)
+if (provInput.value.trim().length == 0 || !isLuogoNascitaValid(provInput.value)) {
     provInput.nextElementSibling.innerHTML = "campo non valido";
     valid = false;
-  }
+  }  
 
-  // Matricola (se presente, deve rispettare il pattern)
-  if (matricolaInput.value.trim().length > 0 && !isMatricolaValid(matricolaInput.value)) {
+//matricola (non obbligatoria, ma controllo alfanumerico)  
+
+if (matricolaInput.value.trim().length < 0 && !isMatricolaValid(matricolaInput.value)) {
     matricolaInput.nextElementSibling.innerHTML = "campo non valido";
     valid = false;
-  }
+}
 
-  // Risultato finale
+
+/* (se tutto è validato...) */
+
   if (valid) {
-    messagePar.classList.remove("error", "reject");
-    messagePar.classList.add("success");
-    messagePar.innerHTML = "Registrazione effettuata";
-
-    // Reset campi (escluso file)
-    let campi = document.querySelector("form").elements;
-    for (let campo of campi) {
-      if (campo.type !== "submit" && campo.type !== "file" && campo.tagName !== "BUTTON") {
-        campo.value = "";
+        messagePar.classList.remove("error");
+        messagePar.classList.add("success");
+        messagePar.innerHTML = "Registrazione effettuata";
+        let campi = document.querySelector("form").elements;
+        for (let campo of campi) {
+          if (campo.type != "submit") {
+            campo.value = "";
+          }
+        }
+        nomeInput.focus();
+      } else {
+        messagePar.classList.remove("success");
+        messagePar.classList.add("reject");
+        messagePar.innerHTML = "credenziali errate";
       }
-    }
+  });
 
-    nomeInput.focus();
-  } else {
-    messagePar.classList.remove("success");
-    messagePar.classList.add("reject");
-    messagePar.innerHTML = "Credenziali errate";
-  }
-});
