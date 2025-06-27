@@ -12,69 +12,69 @@ Moduli Inclusi:
 
 1. Form per Aggiunta Prodotto al Magazzino
 
-- Scopo: Registrare nuovi prodotti e i loro dettagli nel magazzino aziendale.
+ - Scopo: Registrare nuovi prodotti e i loro dettagli nel magazzino aziendale.
 
-- Campi: Nome prodotto, Descrizione, Quantità iniziale, Categoria, Fornitore, Prezzo di acquisto, Prezzo di vendita, Data di registrazione prodotto, Data scadenza prodotto.
+ - Campi: Nome prodotto, Descrizione, Quantità iniziale, Categoria, Fornitore, Prezzo di acquisto, Prezzo di vendita, Data di registrazione prodotto, Data scadenza prodotto.
 
-- Validazione: Controllo su campi obbligatori e formati specifici (es. alfabetico per nomi/categorie, numerico per quantità/prezzi).
+ - Validazione: Controllo su campi obbligatori e formati specifici (es. alfabetico per nomi/categorie, numerico per quantità/prezzi).
 
 2. Form di Ingresso Dipendente
 
-- Scopo: Registrare l'orario di ingresso dei dipendenti.
+ - Scopo: Registrare l'orario di ingresso dei dipendenti.
 
-- Campi: Nome, Cognome, Numero Matricola, Ora inizio (auto-compilata), Note per eventuali ritardi.
+ - Campi: Nome, Cognome, Numero Matricola, Ora inizio (auto-compilata), Note per eventuali ritardi.
 
-- Validazione: Controllo su campi obbligatori e formati (es. alfabetico per nome/cognome, alfanumerico per matricola).
+ - Validazione: Controllo su campi obbligatori e formati (es. alfabetico per nome/cognome, alfanumerico per matricola).
 
-- Funzionalità Aggiuntive: L'ora di inizio viene automaticamente rilevata e inserita dal sistema.
+ - Funzionalità Aggiuntive: L'ora di inizio viene automaticamente rilevata e inserita dal sistema.
 
 3. Modulo di Registrazione Dipendente Completa
 
-- Scopo: Registrare dettagli completi per nuovi dipendenti, inclusi dati personali e di contatto.
+ - Scopo: Registrare dettagli completi per nuovi dipendenti, inclusi dati personali e di contatto.
 
-- Campi: Nome, Cognome, Anno di nascita, Luogo di nascita, Via, Città, Provincia, Telefono, Cellulare, Note, Curriculum Vitae (allegato file), Numero Matricola.
+ - Campi: Nome, Cognome, Anno di nascita, Luogo di nascita, Via, Città, Provincia, Telefono, Cellulare, Note, Curriculum Vitae (allegato file), Numero Matricola.
 
-- Validazione: Ampia validazione su tutti i campi, inclusi formati specifici (es. alfabetico, numerico, alfanumerico) e controllo che almeno un contatto telefonico sia presente.
+ - Validazione: Ampia validazione su tutti i campi, inclusi formati specifici (es. alfabetico, numerico, alfanumerico) e controllo che almeno un contatto telefonico sia presente.
 
-- Funzionalità Aggiuntive: Opzione per allegare il CV in diversi formati.
+ - Funzionalità Aggiuntive: Opzione per allegare il CV in diversi formati.
 
 4. Form per Report Vendite
 
-- Scopo: Permettere ai dipendenti di inviare report dettagliati sulle vendite.
+ - Scopo: Permettere ai dipendenti di inviare report dettagliati sulle vendite.
 
-- Campi: Nome dipendente, Prodotto venduto (selezione da lista), Quantità venduta, Unità (Pz, Gr, Kg), Totale (calcolato automaticamente).
+ - Campi: Nome dipendente, Prodotto venduto (selezione da lista), Quantità venduta, Unità (Pz, Gr, Kg), Totale (calcolato automaticamente).
 
-- Validazione: Campi obbligatori.
+ - Validazione: Campi obbligatori.
 
-- Funzionalità Aggiuntive: Calcolo automatico del prezzo totale basato sul prodotto, quantità e unità di misura selezionati.
+ - Funzionalità Aggiuntive: Calcolo automatico del prezzo totale basato sul prodotto, quantità e unità di misura selezionati.
 
 5. Form per Reso
 
-- Scopo: Registrare i resi di prodotti.
+ - Scopo: Registrare i resi di prodotti.
 
-- Campi: Prodotto coinvolto, Tipo di movimento (entrata/uscita), Quantità, Data del movimento, Motivo del reso, Allega documento/foto del prodotto difettoso.
+ - Campi: Prodotto coinvolto, Tipo di movimento (entrata/uscita), Quantità, Data del movimento, Motivo del reso, Allega documento/foto del prodotto difettoso.
 
-- Validazione: Tutti i campi sono obbligatori e validati lato JS per assicurare l'integrità dei dati.
+ - Validazione: Tutti i campi sono obbligatori e validati lato JS per assicurare l'integrità dei dati.
 
-- Funzionalità Aggiuntive: Opzione per allegare documentazione o foto del prodotto reso.
+ - Funzionalità Aggiuntive: Opzione per allegare documentazione o foto del prodotto reso.
 
 6. Form per Ricezione Merce dal Fornitore
 
-- Scopo: Registrare l'arrivo di merce in magazzino da parte dei fornitori.
+ - Scopo: Registrare l'arrivo di merce in magazzino da parte dei fornitori.
 
-- Campi: Prodotto ricevuto, Quantità ricevuta, Data di ricezione, Numero di fattura.
+ - Campi: Prodotto ricevuto, Quantità ricevuta, Data di ricezione, Numero di fattura.
 
-- Validazione: Controllo su campi obbligatori e formati specifici (es. alfabetico per prodotto, numerico per quantità e numero fattura).
+ - Validazione: Controllo su campi obbligatori e formati specifici (es. alfabetico per prodotto, numerico per quantità e numero fattura).
 
 7. Form di Uscita Dipendente
 
-- Scopo: Registrare l'orario di uscita dei dipendenti.
+ - Scopo: Registrare l'orario di uscita dei dipendenti.
 
-- Campi: Nome, Cognome, Numero Matricola, Ora uscita (auto-compilata), Note per eventuali motivi di uscita anticipata, straordinario o normale uscita.
+ - Campi: Nome, Cognome, Numero Matricola, Ora uscita (auto-compilata), Note per eventuali motivi di uscita anticipata, straordinario o normale uscita.
 
-- Validazione: Controllo su campi obbligatori e formati (es. alfabetico per nome/cognome, alfanumerico per matricola).
+ - Validazione: Controllo su campi obbligatori e formati (es. alfabetico per nome/cognome, alfanumerico per matricola).
 
-- Funzionalità Aggiuntive: L'ora di uscita viene automaticamente rilevata e inserita dal sistema.
+ - Funzionalità Aggiuntive: L'ora di uscita viene automaticamente rilevata e inserita dal sistema.
 
 
 Tecnologie Utilizzate
