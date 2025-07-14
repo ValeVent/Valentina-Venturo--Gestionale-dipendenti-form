@@ -1,14 +1,14 @@
-Gestionale Lato Client
+# Gestionale Lato Client
 
 Questo progetto rappresenta un gestionale lato client, sviluppato in gruppo durante la mia attività lavorativa presso Aton Informatica. È uno dei due progetti chiave realizzati in quell'esperienza e consiste in una suite di moduli basati su form HTML/CSS/JavaScript, progettati per facilitare diverse operazioni di gestione aziendale come l'aggiunta di prodotti, la registrazione degli ingressi/uscita dei dipendenti, la registrazione completa dei dipendenti, l'invio di report vendite, la gestione dei resi e la ricezione di merce dal fornitore.
 
 
-Descrizione Approfondita del Progetto
+## Descrizione Approfondita del Progetto
 
 Il gestionale è una raccolta di interfacce utente indipendenti, ognuna dedicata a una specifica funzionalità aziendale. La logica di validazione dei campi e la gestione delle interazioni utente sono implementate interamente lato client tramite JavaScript. L'obiettivo è fornire strumenti semplici ed efficaci per l'inserimento e la convalida dei dati operativi quotidiani.
 
 
-Moduli Inclusi:
+## Moduli Inclusi:
 
 1. Form per Aggiunta Prodotto al Magazzino
 
@@ -77,7 +77,7 @@ Moduli Inclusi:
  - Funzionalità Aggiuntive: L'ora di uscita viene automaticamente rilevata e inserita dal sistema.
 
 
-Tecnologie Utilizzate
+## Tecnologie Utilizzate
 
 - HTML5: Base strutturale per tutti i moduli form e per la homepage del gestionale.
 
@@ -86,7 +86,7 @@ Tecnologie Utilizzate
 - JavaScript: Logica di validazione dei form, gestione degli eventi utente, manipolazione del DOM, calcoli dinamici (es. nel report vendite)
 
 
-Funzionalità Comuni e Caratteristiche Principali
+## Funzionalità Comuni e Caratteristiche Principali
 
 - Validazione Client-Side: Tutti i form includono una robusta validazione JavaScript per assicurare l'integrità dei dati prima dell'invio.
 
@@ -97,17 +97,17 @@ Funzionalità Comuni e Caratteristiche Principali
 - Flessibilità: Il design modulare permette di integrare o disattivare singoli form in base alle necessità.
 
 
-Come Avviare il Progetto
+## Come Avviare il Progetto
 
 Questo progetto è una raccolta di pagine HTML che possono essere avviate direttamente in un browser.
 
 
-Prerequisiti
+### Prerequisiti
 
 Non sono richiesti particolari prerequisiti oltre a un browser web moderno.
 
 
-Installazione
+### Installazione
 
 1. Clona il repository (o scarica la cartella del progetto):
 
@@ -120,7 +120,7 @@ Assicurati di sostituire 'gestionale-aton-informatica.git' con il nome esatto de
 cd gestionale-aton-informatica
 
 
-Avvio dell'Applicazione
+### Avvio dell'Applicazione
 
 - Per visualizzare la homepage del gestionale, apri il file home_page_gestionale_dipendente.html (o il nome del tuo file HTML principale della dashboard) direttamente nel tuo browser web. Da lì potrai navigare tra i vari moduli.
 
@@ -135,12 +135,12 @@ http-server .
 L'applicazione sarà accessibile all'indirizzo mostrato dal server (es. http://localhost:8080), e potrai navigare tra i diversi moduli aprendo i rispettivi file HTML.
 
 
-Stato del Progetto
+## Stato del Progetto
 
 Questo progetto è una suite funzionale di moduli gestionali lato client, sviluppata per dimostrare capacità di frontend in contesti lavorativi reali e di gestione dati tramite form.
 
 
-Contatti
+## Contatti
 
 GitHub: https://github.com/ValeVent
 
