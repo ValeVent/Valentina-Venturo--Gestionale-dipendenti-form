@@ -18,7 +18,7 @@ Il gestionale è una raccolta di interfacce utente indipendenti, ognuna dedicata
 
  - Validazione: Controllo su campi obbligatori e formati specifici (es. alfabetico per nomi/categorie, numerico per quantità/prezzi).
 
-2. Form di Ingresso Dipendente
+### 2. Form di Ingresso Dipendente
 
  - Scopo: Registrare l'orario di ingresso dei dipendenti.
 
@@ -28,7 +28,7 @@ Il gestionale è una raccolta di interfacce utente indipendenti, ognuna dedicata
 
  - Funzionalità Aggiuntive: L'ora di inizio viene automaticamente rilevata e inserita dal sistema.
 
-3. Modulo di Registrazione Dipendente Completa
+### 3. Modulo di Registrazione Dipendente Completa
 
  - Scopo: Registrare dettagli completi per nuovi dipendenti, inclusi dati personali e di contatto.
 
@@ -38,7 +38,7 @@ Il gestionale è una raccolta di interfacce utente indipendenti, ognuna dedicata
 
  - Funzionalità Aggiuntive: Opzione per allegare il CV in diversi formati.
 
-4. Form per Report Vendite
+### 4. Form per Report Vendite
 
  - Scopo: Permettere ai dipendenti di inviare report dettagliati sulle vendite.
 
@@ -48,7 +48,7 @@ Il gestionale è una raccolta di interfacce utente indipendenti, ognuna dedicata
 
  - Funzionalità Aggiuntive: Calcolo automatico del prezzo totale basato sul prodotto, quantità e unità di misura selezionati.
 
-5. Form per Reso
+### 5. Form per Reso
 
  - Scopo: Registrare i resi di prodotti.
 
@@ -58,7 +58,7 @@ Il gestionale è una raccolta di interfacce utente indipendenti, ognuna dedicata
 
  - Funzionalità Aggiuntive: Opzione per allegare documentazione o foto del prodotto reso.
 
-6. Form per Ricezione Merce dal Fornitore
+### 6. Form per Ricezione Merce dal Fornitore
 
  - Scopo: Registrare l'arrivo di merce in magazzino da parte dei fornitori.
 
@@ -66,7 +66,7 @@ Il gestionale è una raccolta di interfacce utente indipendenti, ognuna dedicata
 
  - Validazione: Controllo su campi obbligatori e formati specifici (es. alfabetico per prodotto, numerico per quantità e numero fattura).
 
-7. Form di Uscita Dipendente
+### 7. Form di Uscita Dipendente
 
  - Scopo: Registrare l'orario di uscita dei dipendenti.
 
