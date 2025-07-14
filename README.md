@@ -10,7 +10,7 @@ Il gestionale è una raccolta di interfacce utente indipendenti, ognuna dedicata
 
 ## Moduli Inclusi:
 
-1. Form per Aggiunta Prodotto al Magazzino
+### 1. Form per Aggiunta Prodotto al Magazzino
 
  - Scopo: Registrare nuovi prodotti e i loro dettagli nel magazzino aziendale.
 
